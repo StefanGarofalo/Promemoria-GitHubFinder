@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Jost', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 3rem;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  text-align: center;
+}
+
+img {
+  max-width: 200px;
+  height: auto;
+  border: 5px solid;
+  border-color: rgb(53, 53, 53);
+}
+
+a {
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+}
+
+ul{
+  position: relative;
+  top: -100px;
+  vertical-align: top;
+  width: 61%;
+  margin: auto;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  font-size: 20px;
+  color: rgb(116, 0, 0);
+  margin: 0 0 1rem 0;
+}
+
+.link{
+  background-color:rgb(53, 53, 53);
+}
+.link:hover{
+  background-color: rgb(99, 99, 99);
+  border-color: rgb(99, 99, 99);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.index {
+  background-color: rgb(53, 53, 53);
+  color: rgb(255, 255, 255)
+}
+
+#results li {
+  margin: 15px;
+}
+
+#results {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 100px;
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+#user-finder {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 3rem;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+#user-finder h2 {
+  font-size: 2rem;
+  border-bottom: 4px solid #ccc;
+  color: rgb(53, 53, 53);
+  margin: 0 0 1rem 0;
+}
+
+#user-finder input {
+  font: inherit;
+  border: 1px solid #ccc;
+}
+
+#user-finder input:focus {
+  outline: none;
+  border-color: #848484;
+  background-color: #dadada;
+}
+
+#user-finder button {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid rgb(53, 53, 53);
+  background-color: rgb(53, 53, 53);
+  color: white;
+  padding: 0.05rem 1rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
+}
+
+#user-finder button:hover,
+#user-finder button:active {
+  background-color: rgb(99, 99, 99);
+  border-color: rgb(99, 99, 99);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+}

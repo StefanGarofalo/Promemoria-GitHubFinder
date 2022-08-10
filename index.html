@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Finder</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>GitHub Finder</h1>
+    </header>
+    <div id="app">
+      <section id="user-finder">
+        <h2>Insert user name</h2>
+        <input type="text" v-model="inputUser"/>
+        <button @click="searchUser(inputUser)">Search</button>
+        <button @click="searchUser(inputUser, increasePage())">Next page</button>
+        <button @click="searchUser(inputUser, decreasePage())">Previous page</button>
+        <p class="error" v-if="requestError">Request error {{ requestStatus }}: {{ errorMessage }}</p>
+        <p class="error" v-if="queryLenght === 0">No user found for: {{ inputUser }}!</p>
+      </section>
+      <div class="container">
+        <ul v-if="queryLenght > 0" id="results">
+          <li v-for="(user, index) in usersList">
+            <div class="card">
+              <div class="index">{{ index + 1}}</div>
+              <br>
+              <img :src="user.avatar">
+              <h3>{{user.name}}</h3>
+              <div class="link"><a :href="user.link">Visit profile</a></div> 
+            </div>
+            <br>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
